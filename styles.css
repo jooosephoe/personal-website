@@ -1,0 +1,98 @@
+/* General body styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(244, 244, 244);
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the business card */
+.business-card {
+    display: flex;
+    width: 500px;
+    height: 275px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    box-shadow: 10px 10px 6px -10px rgba(0,0,0,0.1);
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Keyframe animation for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px)
+    }
+}
+
+.contact-details {
+    font-family: "Work Sans";
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    width: 250px;
+    font-family: "Work Sans";
+    text-align: left;
+}
+
+.contact {
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.email-title,
+.number-title {
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+.email,
+.number {
+    font-weight: 400;
+    font-size: 10px;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+
+.location {
+    font-weight: 400;
+    font-size: 11px;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+.main-info {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    width: 250px;
+}
+
+.name {
+    font-family: "Work Sans";
+    font-weight: 500;
+    margin-top: 85px;
+    margin-bottom: 2px;
+    margin-left: 40px;
+    font-size: 32px;
+    text-align: left;
+}
+
+.title {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 450;
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    text-align: middle;
+}
+
