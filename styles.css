@@ -5,29 +5,86 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(184, 191, 192);
     font-family: Arial, sans-serif;
 }
 
-/* Styles for the business card */
-.business-card {
-    display: flex;
+.container {
     width: 500px;
     height: 275px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px;
-    box-shadow: 10px 10px 6px -10px rgba(0,0,0,0.1);
-    animation: float 2s ease-in-out infinite;
+    perspective: 800px;
 }
 
-/* Keyframe animation for floating effect */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-2px)
-    }
+.container:hover > .business-card {
+    cursor: pointer;
+    transform: rotateX(180deg);
+}
+
+.business-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 500ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-shadow: 10px 10px 6px -10px rgba(0,0,0,0.1);
+    backface-visibility: hidden;
+}
+
+.front {
+    display: flex;
+    background-color: rgb(33, 33, 32);
+}
+
+.back {
+    background-color: rgb(220,222,226);
+    transform: rotateX(180deg);
+    display: flex;
+}
+
+.name-front {
+    font-family: "Work Sans";
+    font-weight: 500;
+    font-size: 35px;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    margin-left: 80px;
+}
+
+.second-name-front {
+    font-family: "Work Sans";
+    font-weight: 500;
+    font-size: 35px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 80px;
+}
+
+.title-front {
+    font-family: "Work Sans";
+    font-weight: 350;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 80px;
+}
+
+.website {
+    font-family: "Work Sans";
+    font-weight: 350;
+    color: white;
+    font-size: 9px;
+    writing-mode: vertical-lr;
+    margin-left: 185px;
+    margin-top: 80px;
 }
 
 .contact-details {
