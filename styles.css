@@ -187,7 +187,7 @@ input[type="checkbox"]:checked + .business-card {
     /* Adjust text sizes and margins for smaller screens */
     .name-front {
         font-size: 24px; /* Reduces font size */
-        margin-top: 35px; /* Reduces top margin */
+        margin-top: 28px; /* Reduces top margin */
         margin-left: 30px; /* Reduces left margin */
     }
 
@@ -205,8 +205,8 @@ input[type="checkbox"]:checked + .business-card {
 
     .website {
         font-size: 8px;
-        margin-left: 40px;
-        margin-top: 30px;
+        margin-left: 90px;
+        margin-top: 20px;
     }
 
     .contact-details {
