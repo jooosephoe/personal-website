@@ -6,17 +6,33 @@ body {
     height: 100vh;
     margin: 0;
     background-color: rgb(184, 191, 192);
-    font-family: Arial, sans-serif;
+    font-family: "Work Sans", sans-serif;
 }
 
 .container {
     width: 500px;
     height: 275px;
     perspective: 800px;
+    display: block;
 }
 
-.container:hover > .business-card {
-    cursor: pointer;
+label:hover .business-card {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,0.2);
+}
+
+label:hover :checked + .business-card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(255,255,255,0.2);
+}
+
+input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+input[type="checkbox"]:checked + .business-card {
     transform: rotateX(180deg);
 }
 
@@ -26,6 +42,7 @@ body {
     position: relative;
     transition: transform 500ms;
     transform-style: preserve-3d;
+    cursor: pointer; /* Ensure cursor changes on hover over the card */
 }
 
 .front,
@@ -38,8 +55,8 @@ body {
 }
 
 .front {
-    display: flex;
     background-color: rgb(33, 33, 32);
+    display: flex;
 }
 
 .back {
@@ -47,6 +64,7 @@ body {
     transform: rotateX(180deg);
     display: flex;
 }
+
 
 .name-front {
     font-family: "Work Sans";
@@ -153,3 +171,41 @@ body {
     text-align: middle;
 }
 
+/* Responsive adjustments */
+@media (max-width: 600px) { /* Adjusts for devices with screen width up to 600px */
+    .container {
+        width: 90%; /* Reduces width to 90% of the screen */
+        height: auto; /* Adjusts height to be automatic */
+        perspective: 600px; /* Optional: Adjust perspective for smaller screens */
+    }
+
+    .business-card, .front, .back {
+        width: 100%; /* Ensures card uses full container width */
+        height: auto; /* Makes height responsive */
+    }
+
+    /* Adjust text sizes and margins for smaller screens */
+    .name-front, .second-name-front {
+        font-size: 24px; /* Reduces font size */
+        margin-top: 20px; /* Reduces top margin */
+        margin-left: 20px; /* Reduces left margin */
+    }
+
+    .title-front, .website, .email, .number, .location {
+        font-size: 12px; /* Reduces font size */
+    }
+
+    .contact, .email-title, .number-title {
+        font-size: 14px; /* Adjusts heading sizes */
+    }
+
+    .website {
+        margin-left: 10px; /* Adjusts margin for website detail */
+        margin-top: 20px;
+    }
+
+    .name, .title {
+        font-size: 18px; /* Reduces name and title font sizes */
+        margin-left: 10px; /* Reduces left margin */
+    }
+}
