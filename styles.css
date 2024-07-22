@@ -174,7 +174,7 @@ input[type="checkbox"]:checked + .business-card {
 /* Responsive adjustments */
 @media (max-width: 600px) { /* Adjusts for devices with screen width up to 600px */
     .container {
-        width: 90%; /* Reduces width to 90% of the screen */
+        width: 80%; /* Reduces width to 90% of the screen */
         height: auto; /* Adjusts height to be automatic */
         perspective: 600px; /* Optional: Adjust perspective for smaller screens */
     }
@@ -185,23 +185,44 @@ input[type="checkbox"]:checked + .business-card {
     }
 
     /* Adjust text sizes and margins for smaller screens */
-    .name-front, .second-name-front {
+    .name-front {
         font-size: 24px; /* Reduces font size */
-        margin-top: 20px; /* Reduces top margin */
-        margin-left: 20px; /* Reduces left margin */
+        margin-top: 35px; /* Reduces top margin */
+        margin-left: 30px; /* Reduces left margin */
     }
 
-    .title-front, .website, .email, .number, .location {
+    .second-name-front {
+        font-size: 24px;
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+
+    .title-front {
+        font-size: 12px;
+        margin-top: 3px;
+        margin-left: 30px;
+    }
+
+    .website {
+        font-size: 8px;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+    .contact-details {
+        width: 50%;
+    }
+
+    .main-info {
+        width: 50%;
+    }
+
+    .email, .number, .location {
         font-size: 12px; /* Reduces font size */
     }
 
     .contact, .email-title, .number-title {
         font-size: 14px; /* Adjusts heading sizes */
-    }
-
-    .website {
-        margin-left: 10px; /* Adjusts margin for website detail */
-        margin-top: 20px;
     }
 
     .name, .title {
